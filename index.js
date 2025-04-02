@@ -42,7 +42,7 @@ io.on('connection', (socket) => {
     socket.emit('current-participants', participants);
   });
 
-  // Handle WebRTC signaling
+  // Handle WebRTC signaling for voice
   socket.on('signal', ({ to, from, signal }) => {
     io.to(to).emit('signal', { from, signal });
   });
