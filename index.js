@@ -7,7 +7,7 @@ const app = express();
 app.use('/', express.static(path.join(__dirname, 'static')));
 
 const httpServer = createServer(app);
-const port = process.env.PORT || 3500;
+const port = process.env.PORT || 8080;
 
 const io = socketIO(httpServer, {
   cors: {
